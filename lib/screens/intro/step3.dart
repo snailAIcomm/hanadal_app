@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'package:hanadal_app/screens/register/register_home.dart';
+
 class Step3 extends StatelessWidget {
   const Step3({Key? key}) : super(key: key);
 
@@ -58,7 +60,12 @@ class Step3 extends StatelessWidget {
               height: 50,
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RegisterHome()));
+                },
                 style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: const Color.fromRGBO(57, 98, 218, 1)),
