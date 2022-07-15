@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hanadal_app/components/forms/normal_text_field.dart';
 import 'package:hanadal_app/components/forms/checkbox_with_label.dart';
 import 'package:hanadal_app/components/buttons/wide_button.dart';
-import 'package:hanadal_app/screens/login/login_home.dart';
 
 class RegisterNickname extends StatelessWidget {
   const RegisterNickname({Key? key}) : super(key: key);
@@ -60,10 +59,7 @@ class RegisterNickname extends StatelessWidget {
               WideButton(
                   label: '동의하고 시작하기',
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginHome()));
+                    Navigator.pushNamed(context, '/login/home');
                   }),
             ],
           ),

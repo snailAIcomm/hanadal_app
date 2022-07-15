@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:hanadal_app/screens/intro/step1.dart';
+
+import 'package:hanadal_app/constant/routes.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/intro/step1',
+      routes: routes,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: Step1(),
     );
   }
 }

@@ -3,8 +3,6 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:hanadal_app/components/buttons/text_link.dart';
-import './step2.dart';
-import 'package:hanadal_app/screens/register/register_home.dart';
 
 class Step1 extends StatelessWidget {
   Step1({Key? key}) : super(key: key) {
@@ -77,18 +75,12 @@ class Step1 extends StatelessWidget {
                 children: [
                   TextLink(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const RegisterHome()));
+                        Navigator.pushNamed(context, '/register/home');
                       },
                       text: '건너뛰기'),
                   TextLink(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Step2()));
+                      Navigator.pushNamed(context, '/intro/step2');
                     },
                     text: '다음',
                   ),

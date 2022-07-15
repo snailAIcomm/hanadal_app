@@ -5,8 +5,6 @@ import 'package:hanadal_app/components/buttons/wide_outline_button.dart';
 import 'package:hanadal_app/components/buttons/wide_button.dart';
 import 'package:hanadal_app/components/forms/wide_text_field.dart';
 
-import 'package:hanadal_app/screens/register/register_home.dart';
-
 class LoginHome extends StatelessWidget {
   const LoginHome({Key? key}) : super(key: key);
 
@@ -72,10 +70,7 @@ class LoginHome extends StatelessWidget {
                   const Text('아직 계정이 없다면'),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const RegisterHome()));
+                      Navigator.pushNamed(context, '/register/home');
                     },
                     child: const Text('가입'),
                   ),

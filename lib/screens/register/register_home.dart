@@ -5,9 +5,6 @@ import 'package:hanadal_app/components/buttons/wide_outline_button.dart';
 import 'package:hanadal_app/components/buttons/wide_button.dart';
 import 'package:hanadal_app/components/forms/wide_text_field.dart';
 
-import 'package:hanadal_app/screens/register/register_nickname.dart';
-import 'package:hanadal_app/screens/login/login_home.dart';
-
 class RegisterHome extends StatelessWidget {
   const RegisterHome({Key? key}) : super(key: key);
 
@@ -66,10 +63,7 @@ class RegisterHome extends StatelessWidget {
               const SizedBox(height: 16),
               WideButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const RegisterNickname()));
+                    Navigator.pushNamed(context, '/register/nickname');
                   },
                   label: '가입하기'),
               Row(
@@ -78,10 +72,7 @@ class RegisterHome extends StatelessWidget {
                   const Text('이미 계정이 있다면'),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginHome()));
+                      Navigator.pushNamed(context, '/login/home');
                     },
                     child: const Text('로그인'),
                   ),
