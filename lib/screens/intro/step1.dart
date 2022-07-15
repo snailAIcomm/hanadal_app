@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:hanadal_app/components/buttons/text_link.dart';
 import './step2.dart';
+import 'package:hanadal_app/screens/register/register_home.dart';
 
 class Step1 extends StatelessWidget {
   Step1({Key? key}) : super(key: key) {
@@ -74,7 +75,14 @@ class Step1 extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextLink(onPressed: () {}, text: '건너뛰기'),
+                  TextLink(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RegisterHome()));
+                      },
+                      text: '건너뛰기'),
                   TextLink(
                     onPressed: () {
                       Navigator.push(
