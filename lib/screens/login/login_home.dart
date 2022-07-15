@@ -25,18 +25,30 @@ class LoginHome extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
-              const WideOutlineButton(
-                  label: '구글로 로그인', iconData: FontAwesomeIcons.google),
-              const WideOutlineButton(
-                  label: '페이스북으로 로그인', iconData: FontAwesomeIcons.facebook),
-              const WideOutlineButton(
-                  label: '애플로 로그인', iconData: FontAwesomeIcons.apple),
-              const WideOutlineButton(
-                  label: '카카오로 로그인', iconData: FontAwesomeIcons.apple),
-              const WideOutlineButton(
-                  label: '네이버로 로그인', iconData: FontAwesomeIcons.apple),
-              const WideOutlineButton(
-                  label: '트위터로 로그인', iconData: FontAwesomeIcons.twitter),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '구글로 로그인',
+                  iconData: FontAwesomeIcons.google),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '페이스북으로 로그인',
+                  iconData: FontAwesomeIcons.facebook),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '애플로 로그인',
+                  iconData: FontAwesomeIcons.apple),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '카카오로 로그인',
+                  iconData: FontAwesomeIcons.apple),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '네이버로 로그인',
+                  iconData: FontAwesomeIcons.apple),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '트위터로 로그인',
+                  iconData: FontAwesomeIcons.twitter),
               const SizedBox(height: 41),
               const Divider(
                 thickness: 1,
@@ -51,9 +63,9 @@ class LoginHome extends StatelessWidget {
               const SizedBox(height: 16),
               const WideTextField('이메일을 입력해 주세요'),
               const SizedBox(height: 5),
-              const WideTextField('비밀번호를 입력해 주세요'),
+              const WideTextField('비밀번호를 입력해 주세요', isPassword: true),
               const SizedBox(height: 16),
-              const WideButton(label: '로그인'),
+              WideButton(onPressed: () {}, label: '로그인'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

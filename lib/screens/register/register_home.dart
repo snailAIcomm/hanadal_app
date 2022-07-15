@@ -5,6 +5,7 @@ import 'package:hanadal_app/components/buttons/wide_outline_button.dart';
 import 'package:hanadal_app/components/buttons/wide_button.dart';
 import 'package:hanadal_app/components/forms/wide_text_field.dart';
 
+import 'package:hanadal_app/screens/register/register_nickname.dart';
 import 'package:hanadal_app/screens/login/login_home.dart';
 
 class RegisterHome extends StatelessWidget {
@@ -25,18 +26,30 @@ class RegisterHome extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
-              const WideOutlineButton(
-                  label: '구글로 가입', iconData: FontAwesomeIcons.google),
-              const WideOutlineButton(
-                  label: '페이스북으로 가입', iconData: FontAwesomeIcons.facebook),
-              const WideOutlineButton(
-                  label: '애플로 가입', iconData: FontAwesomeIcons.apple),
-              const WideOutlineButton(
-                  label: '카카오로 가입', iconData: FontAwesomeIcons.apple),
-              const WideOutlineButton(
-                  label: '네이버로 가입', iconData: FontAwesomeIcons.apple),
-              const WideOutlineButton(
-                  label: '트위터로 가입', iconData: FontAwesomeIcons.twitter),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '구글로 가입',
+                  iconData: FontAwesomeIcons.google),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '페이스북으로 가입',
+                  iconData: FontAwesomeIcons.facebook),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '애플로 가입',
+                  iconData: FontAwesomeIcons.apple),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '카카오로 가입',
+                  iconData: FontAwesomeIcons.apple),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '네이버로 가입',
+                  iconData: FontAwesomeIcons.apple),
+              WideOutlineButton(
+                  onPressed: () {},
+                  label: '트위터로 가입',
+                  iconData: FontAwesomeIcons.twitter),
               const SizedBox(height: 41),
               const Divider(
                 thickness: 1,
@@ -51,7 +64,14 @@ class RegisterHome extends StatelessWidget {
               const SizedBox(height: 24),
               const WideTextField('이메일을 입력해 주세요'),
               const SizedBox(height: 16),
-              const WideButton(label: '가입하기'),
+              WideButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const RegisterNickname()));
+                  },
+                  label: '가입하기'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
