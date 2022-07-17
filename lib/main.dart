@@ -18,7 +18,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/intro/step1',
       routes: routes,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          elevation: 0.0,
+          backgroundColor: Colors.white,
+          titleTextStyle: TextStyle(color: Colors.black, fontSize: 24),
+          toolbarTextStyle: TextStyle(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
+      ),
     );
   }
 }

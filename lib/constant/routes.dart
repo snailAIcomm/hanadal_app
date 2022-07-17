@@ -4,6 +4,7 @@ import 'package:hanadal_app/screens/intro/step3.dart';
 import 'package:hanadal_app/screens/register/register_home.dart';
 import 'package:hanadal_app/screens/register/register_nickname.dart';
 import 'package:hanadal_app/screens/login/login_home.dart';
+import 'package:hanadal_app/screens/shop/shop_base.dart';
 
 final routes = {
   '/intro/step1': (context) => Step1(),
@@ -11,5 +12,6 @@ final routes = {
   '/intro/step3': (context) => const Step3(),
   '/register/home': (context) => const RegisterHome(),
   '/register/nickname': (context) => const RegisterNickname(),
-  '/login/home': (context) => const LoginHome()
+  '/login/home': (context) => const LoginHome(),
+  '/shop/home': (context) => const ShopBase(),
 };

@@ -63,7 +63,11 @@ class LoginHome extends StatelessWidget {
               const SizedBox(height: 5),
               const WideTextField('비밀번호를 입력해 주세요', isPassword: true),
               const SizedBox(height: 16),
-              WideButton(onPressed: () {}, label: '로그인'),
+              WideButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/shop/home');
+                  },
+                  label: '로그인'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

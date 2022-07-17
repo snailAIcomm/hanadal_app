@@ -34,14 +34,12 @@ class RegisterNickname extends StatelessWidget {
             children: [
               const Text(
                 '닉네임을 입력해 주세요',
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 11),
               const Text(
                 '한글, 영어, 숫자로 입력 가능해요(8자 이상)',
-                style:
-                    const TextStyle(fontSize: 11, fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w400),
               ),
               const SizedBox(height: 9),
               const NormalTextField('닉네임을 입력해 주세요'),
