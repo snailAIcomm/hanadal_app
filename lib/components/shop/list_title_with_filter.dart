@@ -15,23 +15,6 @@ class ListTitleWithFilter extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 15),
       child: Row(
         children: _buildTitles(),
-        // children: [
-        //   Text(title,
-        //       style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
-        //   SizedBox(width: 15),
-        //   Text('아우터',
-        //       style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400)),
-        //   SizedBox(width: 10),
-        //   Text('팬츠',
-        //       style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400)),
-        //   SizedBox(width: 10),
-        //   Expanded(
-        //     child: Text('스커트',
-        //         style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400)),
-        //   ),
-        //   Text('전체보기',
-        //       style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400)),
-        // ],
       ),
     );
   }
