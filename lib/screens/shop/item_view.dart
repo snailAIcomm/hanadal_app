@@ -144,7 +144,35 @@ class ItemView extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              height: 200,
+                              color: Colors.transparent,
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(30),
+                                    topRight: Radius.circular(30),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    const Text('Modal BottomSheet'),
+                                    ElevatedButton(
+                                      child: const Text('Done!'),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            );
+                          });
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       width: 167,
