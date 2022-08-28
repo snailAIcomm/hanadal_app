@@ -21,7 +21,11 @@ class Home extends StatelessWidget {
         child: ListView(
           children: [
             const ShopBanner(),
-            const ListTitleWithFilter('인기 코디', subTitles: ['아우터', '팬츠', '스커트']),
+            const ListTitleWithFilter(
+              '인기 코디',
+              subTitles: ['아우터', '팬츠', '스커트'],
+              pathForTotal: '/shop/hot_codi',
+            ),
             Container(
               height: 111,
               child: ListView(

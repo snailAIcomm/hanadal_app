@@ -4,14 +4,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hanadal_app/components/shop/item_type2.dart';
 import 'package:hanadal_app/components/shop/profile_preview.dart';
 
-class ItemView extends StatelessWidget {
-  const ItemView({Key? key}) : super(key: key);
+class ItemViewByCodi extends StatelessWidget {
+  const ItemViewByCodi({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Anna Luisa 넥레이스',
+          title: const Text('Anna Luisa 넥레이스 코디',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700)),
           actions: const [
             Icon(FontAwesomeIcons.bagShopping),
@@ -35,6 +35,7 @@ class ItemView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,10 +71,11 @@ class ItemView extends StatelessWidget {
                     child: Text(
                         '상품 소개가 여기에 들어갑니다. Anna Luisa 넥레이스 상품 소개가 여기에 들어갑니다. Anna Luisa 넥레이스 상품 소개가 여기에 들어갑니다. Anna Luisa 넥레이스 상품 소개가 여기에 들어갑니다.'),
                   ),
-                  const Divider(
-                      thickness: 1,
-                      height: 1,
-                      color: Color.fromRGBO(221, 221, 221, 1)),
+                  const Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: Text('아바타 정보',
+                        style: TextStyle(fontWeight: FontWeight.w700)),
+                  ),
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 15),
                     child: ProfilePreview(),
@@ -107,59 +109,38 @@ class ItemView extends StatelessWidget {
                       ),
                     ],
                   ),
-                ],
-              ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  minimumSize: const Size.fromHeight(50),
-                  elevation: 3),
-              onPressed: () {
-                Navigator.pushNamed(context, '/shop/item_review');
-              },
-              child: const Text(
-                '리뷰(3)',
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 167,
-                      height: 43,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ItemType2(
+                        imageUrl: 'https://picsum.photos/id/4/104/150',
+                        brand: 'Freitag',
+                        name: '피치 숄더백',
+                        price: '5,000',
+                        discountRatio: '30',
+                        desc: '상품설명이 들어감',
                       ),
-                      child: Text('착용해보기'),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 167,
-                      height: 43,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(),
+                      ItemType2(
+                        imageUrl: 'https://picsum.photos/id/5/104/150',
+                        brand: 'Freitag',
+                        name: '피치 숄더백',
+                        price: '5,000',
+                        discountRatio: '30',
+                        desc: '상품설명이 들어감',
                       ),
-                      child: Text('구매하기'),
-                    ),
+                      ItemType2(
+                        imageUrl: 'https://picsum.photos/id/6/104/150',
+                        brand: 'Freitag',
+                        name: '피치 숄더백',
+                        price: '5,000',
+                        discountRatio: '30',
+                        desc: '상품설명이 들어감',
+                      ),
+                    ],
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ));
   }

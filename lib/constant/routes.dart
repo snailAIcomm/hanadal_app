@@ -9,6 +9,9 @@ import 'package:hanadal_app/screens/shop/item_view.dart';
 import 'package:hanadal_app/screens/shop/item_view_detailed_image.dart';
 import 'package:hanadal_app/screens/shop/item_share.dart';
 import 'package:hanadal_app/screens/shop/seller_view.dart';
+import 'package:hanadal_app/screens/shop/hot_codi.dart';
+import 'package:hanadal_app/screens/shop/item_view_by_codi.dart';
+import 'package:hanadal_app/screens/shop/item_review.dart';
 
 final routes = {
   '/intro/step1': (context) => Step1(),
@@ -22,4 +25,7 @@ final routes = {
   '/shop/item_view_detailed_image': (context) => const ItemViewDetailedImage(),
   '/shop/item_share': (context) => const ItemShare(),
   '/shop/seller_view': (context) => const SellerView(),
+  '/shop/hot_codi': (context) => const HotCodi(),
+  '/shop/item_view_by_codi': (context) => const ItemViewByCodi(),
+  '/shop/item_review': (context) => const ItemReview(),
 };

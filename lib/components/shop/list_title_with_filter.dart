@@ -4,9 +4,13 @@ class ListTitleWithFilter extends StatelessWidget {
   final String title;
   final List<String> subTitles;
   final bool showTotal;
+  final String pathForTotal;
 
   const ListTitleWithFilter(this.title,
-      {required this.subTitles, this.showTotal = true, Key? key})
+      {required this.subTitles,
+      this.showTotal = true,
+      this.pathForTotal = '',
+      Key? key})
       : super(key: key);
 
   @override
@@ -14,12 +18,12 @@ class ListTitleWithFilter extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15),
       child: Row(
-        children: _buildTitles(),
+        children: _buildTitles(context),
       ),
     );
   }
 
-  List<Widget> _buildTitles() {
+  List<Widget> _buildTitles(BuildContext context) {
     List<Widget> widgets = [];
 
     if (subTitles.isNotEmpty) {
@@ -44,8 +48,15 @@ class ListTitleWithFilter extends StatelessWidget {
     }
 
     if (showTotal) {
-      widgets.add(const Text('전체보기',
-          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400)));
+      widgets.add(InkWell(
+        onTap: () {
+          if (pathForTotal != '') {
+            Navigator.pushNamed(context, pathForTotal);
+          }
+        },
+        child: const Text('전체보기',
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400)),
+      ));
     }
 
     return widgets;
