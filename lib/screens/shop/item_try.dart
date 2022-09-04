@@ -3,14 +3,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:hanadal_app/components/utils/show_purchase_bottom_sheet.dart';
 
-class ItemViewDetailedImage extends StatelessWidget {
-  const ItemViewDetailedImage({Key? key}) : super(key: key);
+class ItemTry extends StatelessWidget {
+  const ItemTry({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('자세히 보기',
+        title: const Text('착용해 보기',
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700)),
         actions: const [
           Icon(FontAwesomeIcons.bagShopping),
@@ -19,10 +19,14 @@ class ItemViewDetailedImage extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: [
-          Image.asset('assets/images/shop/item_detail_1.png', fit: BoxFit.fill)
-        ],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/shop/item_detail_1.png',
+                fit: BoxFit.cover),
+          ],
+        ),
       ),
       persistentFooterButtons: [
         ElevatedButton(

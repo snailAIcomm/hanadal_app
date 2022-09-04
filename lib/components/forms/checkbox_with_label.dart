@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:hanadal_app/constant/layout.dart' as layout;
+import 'package:hanadal_app/constants/layout.dart' as layout;
 
 class CheckBoxWithLabel extends StatefulWidget {
   final String label;

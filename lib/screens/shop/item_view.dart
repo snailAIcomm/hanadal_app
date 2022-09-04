@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:hanadal_app/components/shop/item_type2.dart';
 import 'package:hanadal_app/components/shop/profile_preview.dart';
+import 'package:hanadal_app/components/utils/show_purchase_bottom_sheet.dart';
 
 class ItemView extends StatelessWidget {
   const ItemView({Key? key}) : super(key: key);
@@ -130,7 +131,9 @@ class ItemView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/shop/item_try');
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       width: 167,
@@ -145,33 +148,7 @@ class ItemView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      showModalBottomSheet(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              height: 200,
-                              color: Colors.transparent,
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30),
-                                  ),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    const Text('Modal BottomSheet'),
-                                    ElevatedButton(
-                                      child: const Text('Done!'),
-                                      onPressed: () => Navigator.pop(context),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            );
-                          });
+                      showPurchaseBottomSheet(context);
                     },
                     child: Container(
                       alignment: Alignment.center,

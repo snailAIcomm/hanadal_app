@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:hanadal_app/constant/layout.dart' as layout;
+import 'package:hanadal_app/constants/layout.dart' as layout;
 import 'package:hanadal_app/components/shop/review_stars.dart';
 import 'package:hanadal_app/components/shop/review_item.dart';
 

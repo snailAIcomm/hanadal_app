@@ -12,6 +12,7 @@ import 'package:hanadal_app/screens/shop/seller_view.dart';
 import 'package:hanadal_app/screens/shop/hot_codi.dart';
 import 'package:hanadal_app/screens/shop/item_view_by_codi.dart';
 import 'package:hanadal_app/screens/shop/item_review.dart';
+import 'package:hanadal_app/screens/shop/item_try.dart';
 
 final routes = {
   '/intro/step1': (context) => Step1(),
@@ -28,4 +29,5 @@ final routes = {
   '/shop/hot_codi': (context) => const HotCodi(),
   '/shop/item_view_by_codi': (context) => const ItemViewByCodi(),
   '/shop/item_review': (context) => const ItemReview(),
+  '/shop/item_try': (context) => const ItemTry(),
 };
